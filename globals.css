@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for DatePicker */
+.datepicker {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main calendar styles */
+.react-calendar {
+  height: 330px;
+  /* Set your desired height */
+  border-radius: 12px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Prevent overflow for rounded corners */
+  border: 1px solid #b4ffc1;
+  /* Subtle border for the calendar */
+}
+
+/* Header styles */
+.react-calendar__navigation button {
+  background-color: #8af59a;
+  /* Light background for navigation */
+  border: none;
+  /* Remove default border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Padding for buttons */
+  transition: background-color 0.3s;
+  /* Smooth transition */
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #2b93ce;
+  /* Change color on hover */
+}
+
+/* Day cell styles */
+.react-calendar_month-viewdays_day {
+  padding: 10px;
+  /* Padding for day cells */
+  border-radius: 8px;
+  /* Rounded corners for day cells */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover */
+  color: #2e9644 !important;
+  /* Default text color for future dates */
+}
+
+/* Style for past dates */
+.react-calendar_month-viewdaysday.react-calendarmonth-viewdays_day--neighboring {
+  color: gray;
+  /* Gray text color for past dates */
+}
+
+/* Style for all weekend days */
+.react-calendar_month-viewdaysday.react-calendarmonth-viewdays_day--weekend {
+  color: gray;
+  /* Gray text color for Saturdays and Sundays */
+}
+
+/* Highlight styles */
+.highlight {
+  background-color: #0062a5 !important;
+  /* Highlight color */
+  color: white !important;
+  /* Text color */
+  border-radius: 50%;
+  /* Circular highlight */
+}
+
+/* Hover effect for highlighted dates */
+.react-calendar_month-viewdays_day.highlight:hover {
+  background-color: #00568c !important;
+  /* Darker shade on hover */
+}

@@ -3,7 +3,6 @@ import { useDatePicker } from "../context/DatePickerContext";
 
 // Define types for recurrence
 type RecurrenceType = "daily" | "weekly" | "monthly" | "yearly";
-type RecurrenceEndType = "endless" | "endByDate";
 
 const RecurrenceOptions: React.FC = () => {
   const {

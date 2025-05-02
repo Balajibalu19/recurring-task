@@ -1,6 +1,10 @@
 import React from "react";
 import { useDatePicker } from "../context/DatePickerContext";
 
+// Define types for recurrence
+type RecurrenceType = "daily" | "weekly" | "monthly" | "yearly";
+type RecurrenceEndType = "endless" | "endByDate";
+
 const RecurrenceOptions: React.FC = () => {
   const {
     recurrenceType,
@@ -44,7 +48,7 @@ const RecurrenceOptions: React.FC = () => {
         </label>
         <select
           value={recurrenceType}
-          onChange={(e) => setRecurrenceType(e.target.value as any)}
+          onChange={(e) => setRecurrenceType(e.target.value as RecurrenceType)} // Use RecurrenceType
           className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 mt-1"
         >
           <option value="daily">Daily</option>
